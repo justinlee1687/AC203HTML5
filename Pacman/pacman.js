@@ -74,10 +74,10 @@ function collisionCheck(){
 		badCollision=false
 	}
 	if((x>=goodX) && (x<=goodX+spriteWidth) && (y>=goodY) && (y<=goodY+spriteHeight)){
-		badCollision=true;
+		goodCollision=true;
 	}
 	else{
-		badCollision=false
+		goodCollision=false
 	}
 }
 //change locations and scoring
@@ -88,6 +88,13 @@ function collisionHandle(){
 		score-=1
 		document.getElementById("ScoreSystem").innerHTML = "Score:" +score;
 		badCollision==false;
+	}
+	if(goodCollision==true){
+		goodX = Math.floor(Math.random()*421);
+		goodY = Math.floor(Math.random()*421);
+		score-=1
+		document.getElementById("ScoreSystem").innerHTML = "Score:" +score;
+		goodCollision==false;
 	}
 	
 }
