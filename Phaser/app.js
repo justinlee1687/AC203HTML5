@@ -9,7 +9,27 @@ function preload() {
 }
 
 function create() {
+	//enable arcade game physics in the game
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+
+	//add platforms as a group, that contins ground and 2 ledges
 	game.add.sprite(750,0,'ground')
+
+	//create the ground inside the group
+	platform = game.add.group()
+	platforms.enableBody = true
+
+	//create the ground inside the group
+	var ground = platforms.create(0,game.world.height-50,'ground')
+	ground.scale.setTo(2,2)
+	ground.body.immovable= true;
+
+	//add the 2 ledges
+	var ledge = platform.create(-150,250,'ground')
+	ledge.body.immovable= true;
+	ledge = platforms.create(400,400,'ground')
+	ledge.body.immovable= true;
+
 }
 
 function update() {
