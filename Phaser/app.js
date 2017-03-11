@@ -16,7 +16,7 @@ function create() {
 	game.add.sprite(750,0,'ground')
 
 	//create the ground inside the group
-	platform = game.add.group()
+	platforms = game.add.group()
 	platforms.enableBody = true
 
 	//create the ground inside the group
