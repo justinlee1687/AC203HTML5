@@ -13,7 +13,7 @@ function create() {
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 
 	//add platforms as a group, that contins ground and 2 ledges
-	game.add.sprite(750,0,'ground')
+	game.add.sprite(0,0,'sky')
 
 	//create the ground inside the group
 	platforms = game.add.group()
