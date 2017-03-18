@@ -76,7 +76,7 @@ function update() {
 	else{
 		player.body.velocity.x = 0;
 		player.frame = 4;
-
+	}
 	//player can jump of touching ground
 	if (cursors.up.isDown && player.body.touching.down){
 		player.body.velocity.y= -330
@@ -84,8 +84,6 @@ function update() {
 	//what happens when the player overlaps with the star
 	function collectStar(player,star){
 		star.kill()
-	}
-
 	}
 
 
