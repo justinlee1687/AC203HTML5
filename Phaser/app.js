@@ -88,7 +88,7 @@ function update() {
 		star.kill()
 		score += 10;
 		scoreText.text="Score: "+score;
-		for ( var i=0; i<2; i++){
+		for ( var i=0; i<20; i++){
 		var star = stars.create(Math.random()*750, 20, 'star');
 		star.body.gravity.y=200;
 		star.body.bounce.y=0.6+Math.random()*0.3;
