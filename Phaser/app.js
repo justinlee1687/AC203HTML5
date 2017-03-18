@@ -62,7 +62,7 @@ function update() {
 	//collision between player and platforms
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(stars,platforms);
-	game.physics.arcade.collide(player,stars,collectStar,null,this);
+	game.physics.arcade.overlap(player,stars,collectStar,null,this);
 
 	//when left or right key pressed
 	if(cursors.left.isDown){	
