@@ -62,6 +62,7 @@ function update() {
 	//collision between player and platforms
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(stars,platforms);
+	game.physics.arcade.collide(player,stars,collectStar,null,this);
 
 	//when left or right key pressed
 	if(cursors.left.isDown){	
@@ -79,6 +80,10 @@ function update() {
 	//player can jump of touching ground
 	if (cursors.up.isDown && player.body.touching.down){
 		player.body.velocity.y= -300
+	}
+	//what happens when the player overlaps with the star
+	function collectStar(player,star){
+	star.kill()
 	}
 
 	}
